@@ -1,0 +1,51 @@
+.navBar{
+    background-color: rgb(16, 5, 119);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.navItems{
+    width: auto;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navItem{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.searchBox{
+    background-color: aliceblue;
+    font-weight: 600;
+    border-radius: 1rem;
+}
+
+.searchBox::placeholder{
+    color: cornflowerblue;
+}
+
+.navActions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navActionsBtn{
+    margin-left: 1rem;
+    font-weight: bold;
+}

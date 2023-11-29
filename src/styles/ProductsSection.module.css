@@ -1,0 +1,9 @@
+.productSection{
+    display: flex;            /* flex */
+    flex-direction: row;      /* flex-row */
+    flex-wrap: wrap;          /* flex-wrap */
+    flex-grow: 1;             /* flex-grow */
+    flex-shrink: 1;           /* flex-shrink */
+    justify-content: flex-start; /* justify-start */
+    align-items: center; 
+  }
