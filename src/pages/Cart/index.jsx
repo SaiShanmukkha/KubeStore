@@ -23,7 +23,7 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <main className='container'>
       <h2>Your Cart</h2>
       <ul>
         {localCartItems.map(item => (
@@ -33,7 +33,7 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };
 

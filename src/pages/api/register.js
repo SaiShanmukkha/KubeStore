@@ -26,7 +26,8 @@ export default async function handler(req, res){
                 data: {
                     name,
                     email,
-                    hashedPassword
+                    hashedPassword,
+                    isEmailVerified:false
                 }
             });
             

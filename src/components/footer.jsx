@@ -1,7 +1,7 @@
 import FaceBookLogo from "@assets/icons/facebook.svg";
 import InstagramLogo from "@assets/icons/instagram.svg";
-import styles from "@styles/FootBar.module.css";
 import XLogo from "@assets/icons/x.svg";
+import styles from "@styles/FootBar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,46 +10,26 @@ export default function FootBar(){
         <footer>
             <section className={styles.footerSectionOne}>
                 <div className={styles.sectionOneEmailBlock}>
-                    <h1><Link href="/">KubeStore</Link></h1>
-                    <h3>Subscribe to our email alerts!</h3>
-                    <input type="email" placeholder="Enter your email address" />
+                    <h1 className="text-2xl font-bold my-1"><Link href="/">KubeStore</Link></h1>
+                    <h3 className="my-1">Subscribe to our email alerts!</h3>
+                    <form>
+                        <div className="flex space-x-4 my-1">
+                            <input type="email" placeholder="Please Enter you Email" className="flex-grow rounded-l-md border border-gray-200 bg-gray-100 px-4 py-1.5 text-gray-700 focus:outline-none focus:border-purple-500" />
+                        </div>
+                    </form>
                 </div>
                 <div className={styles.sectionOneLinkList}>
-                    <strong>Shop</strong>
+                    <strong>Shop Shoes</strong>
                     <ul className={styles.sectionOneLinkListItems}>
-                        <li>qwerty00</li>
-                        <li>qwerty01</li>
-                        <li>qwerty02</li>
-                        <li>qwerty03</li>
-                        <li>qwerty04</li>
-                        <li>qwerty05</li>
-                        <li>qwerty06</li>
-                        <li>qwerty07</li>
-                        <li>qwerty08</li>
-                        <li>qwerty09</li>
-                        <li>qwerty10</li>
-                        <li>qwerty11</li>
-                        <li>qwerty12</li>
-                        <li>qwerty13</li>
+                        <li>Sports</li>
+                        <li>shoes</li>
                     </ul>
                 </div>
                 <div className={styles.sectionOneLinkList}>
-                    <strong>Shop</strong>
+                    <strong>Quick Links</strong>
                     <ul className={styles.sectionOneLinkListItems}>
-                        <li>qwerty00</li>
-                        <li>qwerty01</li>
-                        <li>qwerty02</li>
-                        <li>qwerty03</li>
-                        <li>qwerty04</li>
-                        <li>qwerty05</li>
-                        <li>qwerty06</li>
-                        <li>qwerty07</li>
-                        <li>qwerty08</li>
-                        <li>qwerty09</li>
-                        <li>qwerty10</li>
-                        <li>qwerty11</li>
-                        <li>qwerty12</li>
-                        <li>qwerty13</li>
+                        <li>Gift Cards</li>
+                        <li>Support</li>
                     </ul>
                 </div>
             </section>

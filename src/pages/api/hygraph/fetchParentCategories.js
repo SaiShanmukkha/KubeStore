@@ -3,27 +3,7 @@ export default async function handler(req, res) {
     let categories_data = [];
       let categoriesAvailable = true;
       let currentIndex = 0;
-    try {
-      const query = ```
-        query Assets {
-            categoriesConnection(skip: ${currentIndex}, where: {parentCategory_none: {}}) {
-            edges {
-                node {
-                categoryName
-                id
-                }
-            }
-            pageInfo {
-                endCursor
-                hasNextPage
-                hasPreviousPage
-                pageSize
-                startCursor
-            }
-            }
-        }
-    ```;
-      
+    try {      
       while (categoriesAvailable) {
         const response = await fetch(process.env.HYGRAPH_RW_ENDPOINT, {
           method: "POST",
@@ -32,7 +12,25 @@ export default async function handler(req, res) {
             Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
           },
           body: JSON.stringify({
-            query: query,
+            query: `
+                query Assets {
+                  categoriesConnection(skip: ${currentIndex}, where: {parentCategory_none: {}}) {
+                  edges {
+                      node {
+                      categoryName
+                      id
+                      }
+                  }
+                  pageInfo {
+                      endCursor
+                      hasNextPage
+                      hasPreviousPage
+                      pageSize
+                      startCursor
+                  }
+                }
+              }
+            `,
           }),
         });
         const json = await response.json();

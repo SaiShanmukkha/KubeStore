@@ -1,6 +1,6 @@
 export default function Index(){
     return (
-        <main className="min-h-screen">
+        <main className="container">
             Search Page
         </main>
     );

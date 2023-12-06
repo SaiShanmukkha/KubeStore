@@ -16,8 +16,7 @@ export default function Login(){
 
     useEffect(() => {
         if (status === "authenticated") {
-            router.push("/home",)
-            toast.success("Redirecting to home page.")
+            router.push("/",);
         }
     }, [router, status]);
 
@@ -34,27 +33,16 @@ export default function Login(){
         } )
     }
 
-    const handleGoogleSignIn = (e) => {
-        e.preventDefault();
-        signIn("google")
-    }
-
-    const handleGithubSignIn = (e) => {
-        e.preventDefault();
-        signIn("github")
-    }
-
     return (
         <>
             <Head>
-                <title>BudgeTrack | Login</title>
-                <meta name="description" content="All Expenses Data at One Place" />
+                <title>KubeStore | Login</title>
+                <meta name="description" content="An Ecommerce Store" />
             </Head>
             <main className="container">
                 <div className={styles.mainContent}>
                     <div className={styles.header}>
-                        <h1 className={styles.welcomeHeader}>BudgeTrack Login Page!</h1>
-                        <p className={styles.paraContent}>Sign in to your account to effortlessly manage your finances and keep your expenses in check. Our intuitive and user-friendly platform helps you stay on top of your budget, track your spending, and achieve your financial goals with ease.</p>
+                        <h1 className={styles.welcomeHeader}>KubeStore Login Page!</h1>
                     </div>                
 
                     <div className={styles.signInForm}>
@@ -72,16 +60,7 @@ export default function Login(){
                             </div>
                             <button type="submit" className={styles.submitBtn} >Login</button>
                         </form>
-
-                        <hr />
-
-                        <div className={styles.socialAuth}>
-                            <p>-------------- or Login using below options ---------------</p>
-                            <button className={`${styles.socialBtn} ${styles.googleBtn}`} onClick={handleGoogleSignIn} >Google</button>
-                            <button className={`${styles.socialBtn} ${styles.githubBtn}`} onClick={handleGithubSignIn} >Github</button>
-                        </div>
                     </div>
-
 
                     <div>
                         <p className={styles.signupLink}>Don&apos;t have an account? <Link className={styles.linktoSignUp} href={"/auth/register"}>Create Account</Link></p>

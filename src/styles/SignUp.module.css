@@ -5,8 +5,11 @@
 }
 
 .welcomeHeader{
-    color: rgb(217, 0, 255);
+    color: #0b5944;
     margin: 1rem;
+    font-size: xx-large;
+    font-weight: 800;
+    text-align: center;
 }
 
 .paraContent{
@@ -59,11 +62,11 @@
 
 .signUpFormHeader{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1rem;
     color: var(--header-color);
     text-shadow: 2px 2px rgb(226, 229, 226);
     text-decoration: solid;
     text-align: center;
+    font-size: larger;
 }
 
 .formGroup{
@@ -86,11 +89,11 @@
     color: var(--form-input-color);
     background-color: var(--global-background-color);
     margin: 0.4rem 0;
-    border: 2px solid rgb(63, 1, 150);
+    border: 2px solid #0b5944;
 }
 
 .inputField:focus{
-    border: 2px solid rgb(238, 0, 255);
+    border: 2px solid #056a4f;
     outline: none;
 }
 
@@ -103,7 +106,7 @@
     margin: 0.5rem 0;
     border-radius: 0.5rem;
     cursor: pointer;
-    background-color: rgb(217, 0, 255);
+    background-color: #033b2c;
 }
 
 

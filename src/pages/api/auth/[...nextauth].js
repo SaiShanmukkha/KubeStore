@@ -1,6 +1,4 @@
 import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
-import Googleprovider from "next-auth/providers/google"
 import CredentialsProvider from "next-auth/providers/credentials"
 import prisma from "@utilities/prismadb"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
@@ -9,14 +7,6 @@ import bcrypt from "bcrypt"
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
-    }),
-    Googleprovider({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
-    }),
     CredentialsProvider({
       name: "credentials",
       credentials:{
@@ -58,11 +48,12 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   session:{
     strategy: "jwt",
-    // maxAge: 1 * 60 * 60,
+    maxAge: 24 * 60 * 60,
   },
   debug: process.env.NODE_ENV === "development",
   pages: {
     signIn: '/auth/login',
+    register: '/auth/register'
   },
   jwt: {
     encryption: true,
@@ -74,13 +65,6 @@ export const authOptions = {
           if(user){
             token.userId = user.id;
             token.emailVerified = user.emailVerified;
-          }
-        }else if(account.type === "oauth"){
-          if(user){
-            token.userId = user.id;
-          }
-          if(profile){
-            token.emailVerified = profile.email_verified;
           }
         }
       }

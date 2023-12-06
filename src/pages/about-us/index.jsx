@@ -1,6 +1,6 @@
 export default function Index(){
     return (
-        <main className="border-2 m-0 p-0 bg-white">
+        <main className="container">
             <div className="m-10">
                 <h2 className="font-extrabold text-xl">About Kube Store</h2>
                 <p className="m-2">Welcome to Kube Store, your one-stop destination for a diverse range of products, where style, convenience, and quality come together. Established with a passion for delivering exceptional customer experiences, we have emerged as a trusted name in the world of e-commerce. At Kube Store, we are committed to providing you with an extensive selection of clothing, shoes, groceries, and electronic items, all curated to meet your daily needs and desires.</p>

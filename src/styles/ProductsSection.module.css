@@ -1,9 +1,10 @@
 .productSection{
-    display: flex;            /* flex */
-    flex-direction: row;      /* flex-row */
-    flex-wrap: wrap;          /* flex-wrap */
-    flex-grow: 1;             /* flex-grow */
-    flex-shrink: 1;           /* flex-shrink */
-    justify-content: flex-start; /* justify-start */
+    display: flex;      
+    background-color: rgb(240, 240, 240);
+    flex-direction: row;     
+    flex-wrap: wrap;          
+    flex-grow: 1;            
+    flex-shrink: 1;           
+    justify-content: flex-start; 
     align-items: center; 
   }

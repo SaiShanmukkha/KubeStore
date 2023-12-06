@@ -13,7 +13,7 @@ export function useProducts(){
       const data = await response.json();
   
       if(response.status == 200){
-          return data.recentTransactions;
+          return data.products;
       }
   }
     const { data, error, isLoading, mutate } = useSWR("/api/hygraph/fetchrecenttransactions", productsFetcher);

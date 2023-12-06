@@ -1,6 +1,6 @@
 export default function Index(){
     return (
-        <main>
+        <main className="container">
             Product Page
         </main>
     );

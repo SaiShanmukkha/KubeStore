@@ -53,15 +53,14 @@ export default function SignUp(){
     return (
         <>
             <Head>
-                <title>BudgeTrack | Sign Up</title>
+                <title>KubeStore | Sign Up</title>
                 <meta name="description" content="All Expenses Data at One Place" />
             </Head>
             <main className="container">
                 <div className={styles.mainContent}>
 
                     <div className={styles.headText}>
-                        <h1 className={styles.welcomeHeader}>BugeTrack SignUp Page!</h1>
-                        <p className={styles.paraContent}>Take charge of your finances and embark on a journey to financial freedom with our powerful expense management platform. Sign up today to start tracking your expenses, setting budgets, and achieving your financial goals like never before!</p>  
+                        <h1 className={styles.welcomeHeader}>KubeStore SignUp Page!</h1>
                     </div>
 
                     <div className={styles.signUpFormContainer}>
@@ -89,14 +88,6 @@ export default function SignUp(){
                                 </div>
                                 <button type="submit" className={styles.submitBtn} >Register</button>
                             </form>
-                        </div>
-
-                        <hr />
-
-                        <div className={styles.socialAuth}>
-                            <p>---------- or register using below options --------</p>
-                            <button className={`${styles.socialBtn} ${styles.googleBtn}`} onClick={()=>{signIn("google")}} >Google</button>
-                            <button className={`${styles.socialBtn} ${styles.githubBtn}`} onClick={()=>{signIn("github")}} >Github</button>
                         </div>
 
                     </div>

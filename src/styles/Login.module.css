@@ -5,8 +5,10 @@
 }
 
 .welcomeHeader{
-    color: rgb(164, 20, 254);
+    color: #0b5944;
     margin: 1rem;
+    font-size: xx-large;
+    font-weight: 800;
     text-align: center;
 }
 
@@ -46,7 +48,7 @@
 
 .signInFormHeader{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1rem;
+    font-size: larger;
     text-shadow: 2px 2px rgb(208, 210, 208);
     color: var(--header-color);
     text-decoration: solid;
@@ -75,11 +77,11 @@
     color: var(--form-input-color);
     background-color: var(--global-background-color);
     margin: 0.4rem 0;
-    border: 2px solid rgb(130, 4, 227);
+    border: 2px solid #0b5944;
 }
 
 .inputField:focus{
-    border: 2px solid rgb(255, 0, 255);
+    border: 2px solid #047d5d;
     outline: none;
 }
 
@@ -92,7 +94,7 @@
     border-radius: 0.5rem;
     cursor: pointer;
     color: white;
-    background-color: rgb(135, 38, 232);
+    background-color: #063e30;
 }
 
 .signInForm hr {
