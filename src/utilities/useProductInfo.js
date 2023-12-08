@@ -1,18 +1,17 @@
 import useSWR from 'swr';
 
 export function useProductInfo(slug){
-
     const productFetcher = async () => {
       const response = await fetch('/api/hygraph/fetchProductBySlug', { 
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({slug: slug})
+            body: JSON.stringify(slug)
           });
-  
+
       const data = await response.json();
-  
+      console.log(data)
       if(response.status == 200){
           return data.product;
       }

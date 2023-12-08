@@ -52,9 +52,9 @@ export default async function handler(req, res) {
         });
         const json = await response.json();
         if (response.ok) {
-          console.log(json.data.productsConnection.pageInfo);
+       
           currentIndex += parseInt(json.data.productsConnection.pageInfo.pageSize);
-          console.log("CurrentINdex = ", currentIndex);
+        
           productsAvailable = json.data.productsConnection.pageInfo.hasNextPage;
           for (let nd of json.data.productsConnection.edges) {
             products_data.push(nd.node);

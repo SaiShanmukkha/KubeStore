@@ -1,11 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './cartReducer'; // Assuming you have a cart slice
+import { configureStore } from '@reduxjs/toolkit'
+import cartReducer from './cartReducer'
+import thunk from 'redux-thunk'
 
-export const store = configureStore({
-    reducer: {
-        cart: cartReducer,
-        // Add other reducers here
-    },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
-    devTools: process.env.NODE_ENV !== 'production',
-});
+export default configureStore({
+  reducer: {
+    cart: cartReducer
+  },
+  devTools: process.env.NODE_ENV != "production",
+  middleware: [thunk]
+})

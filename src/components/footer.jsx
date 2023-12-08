@@ -1,54 +1,58 @@
 import FaceBookLogo from "@assets/icons/facebook.svg";
 import InstagramLogo from "@assets/icons/instagram.svg";
 import XLogo from "@assets/icons/x.svg";
-import styles from "@styles/FootBar.module.css";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function FootBar(){
     return (
-        <footer>
-            <section className={styles.footerSectionOne}>
-                <div className={styles.sectionOneEmailBlock}>
-                    <h1 className="text-2xl font-bold my-1"><Link href="/">KubeStore</Link></h1>
-                    <h3 className="my-1">Subscribe to our email alerts!</h3>
-                    <form>
-                        <div className="flex space-x-4 my-1">
-                            <input type="email" placeholder="Please Enter you Email" className="flex-grow rounded-l-md border border-gray-200 bg-gray-100 px-4 py-1.5 text-gray-700 focus:outline-none focus:border-purple-500" />
+        <footer className="bg-gray-50">
+            <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 md:grid-cols-2 xl:grid-cols-4 xl:px-10">
+                <div className="max-w-sm">
+                <div className="mb-6 flex h-12 items-center space-x-2">
+                    <span className="text-2xl font-bold">Kube<span className="text-green-600">Store</span>.</span>
+                </div>
+                <div className="text-gray-500">One place retail commerce platform for all your needs.</div>
+                </div>
+                <div className="">
+                <div className="mt-4 mb-2 font-medium xl:mb-4">Address</div>
+                <div className="text-gray-500">
+                    1890 Proxima Dr, <br />
+                    Kube Street, <br />
+                    Texas, US
+                </div>
+                </div>
+                <div className="">
+                <div className="mt-4 mb-2 font-medium xl:mb-4">Links</div>
+                <nav aria-label="Footer Navigation" className="text-gray-500">
+                    <ul className="space-y-3">
+                        <li><a className="hover:text-blue-600 hover:underline" href="#">Pricing</a></li>
+                        <li><a className="hover:text-blue-600 hover:underline" href="#">Demo</a></li>
+                        <li><a className="hover:text-blue-600 hover:underline" href="#">Press</a></li>
+                        <li><a className="hover:text-blue-600 hover:underline" href="#">Support Hub</a></li>
+                        <li><a className="hover:text-blue-600 hover:underline" href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                </div>
+                <div className="">
+                    <div className="mt-4 mb-2 font-bold xl:mb-4">Subscribe to our promotions</div>
+                    <div className="flex flex-col">
+                        <div className="mb-4">
+                        <input type="email" className="focus:outline mb-2 block h-14 w-full rounded-xl bg-gray-200 px-4 sm:w-80 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="Enter your email" />
+                        <button className="block rounded-xl bg-green-900 px-6 py-3 font-medium text-white">Subscribe</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
-                <div className={styles.sectionOneLinkList}>
-                    <strong>Shop Shoes</strong>
-                    <ul className={styles.sectionOneLinkListItems}>
-                        <li>Sports</li>
-                        <li>shoes</li>
-                    </ul>
+            </div>
+            <div className="bg-gray-100">
+                <div className="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
+                <div className="">© 2022 KubeStore | All Rights Reserved</div>
+                <div className="">
+                    <Link className="mx-1" href="/privacy-policy">Privacy Policy</Link>
+                    <span>|</span>
+                    <Link className="mx-1" href="/terms-and-conditions">Terms and Conditions</Link>
                 </div>
-                <div className={styles.sectionOneLinkList}>
-                    <strong>Quick Links</strong>
-                    <ul className={styles.sectionOneLinkListItems}>
-                        <li>Gift Cards</li>
-                        <li>Support</li>
-                    </ul>
                 </div>
-            </section>
-            
-            <section className={styles.footerSectionTwo}>
-                <h2>Let&apos;s go social</h2>
-                <div className={styles.socialLinks}>
-                    <Link href="https://facebook.com"><Image className="opacity-90 cursor-pointer" src={FaceBookLogo} alt={"FaceBook"} /></Link>
-                    <Link href="https://instagram.com"><Image className="opacity-90 cursor-pointer" src={InstagramLogo} alt={"Instagram"} /></Link>
-                    <Link href="https://x.com"><Image className="opacity-90 cursor-pointer" src={XLogo} alt={"X | Twitter"} /></Link>
-                </div>
-                <div className={styles.legal}>
-                    <a className="cursor-pointer hover:underline" href="/privacy-policy">Privacy Policy</a>
-                    <p className="font-extrabold">|</p>
-                    <a className="cursor-pointer hover:underline" href="/terms-and-conditions">Terms & conditions</a>
-                </div>
-                <p className={styles.copyRgt}>© 2023 Imagine Marketing Limited. All Rights Reserved.</p>
-                <p className={styles.copyRgt}>For queries contact us: <strong>support@proximakubestore.com</strong></p>
-            </section>
+            </div>
         </footer>
     );
 }

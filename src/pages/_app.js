@@ -12,7 +12,7 @@ export default function App({
   pageProps: { session, ...pageProps },
 }) {
   return (
-    // <Provider store={store}>
+    <Provider store={store}>
       <SessionProvider session={session}>
         <SWRConfig
           value={{
@@ -32,7 +32,7 @@ export default function App({
           <FootBar />
         </SWRConfig>
       </SessionProvider>
-    // </Provider>
+    </Provider>
   );
 }
 
@@ -40,7 +40,7 @@ function Auth({ children }) {
   const { session, status } = useSession({ required: true });
   if (status === "loading") {
     return (
-      <main className={common.container}>
+      <main className="text-center container">
         <div>Loading</div>
       </main>
     );

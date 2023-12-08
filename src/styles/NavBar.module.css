@@ -3,6 +3,11 @@
     color: rgb(0, 0, 0);
     padding: 1rem;
     display: flex;
+    max-height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -46,9 +51,28 @@
 }
 
 .navActionsBtn{
+    position: relative;
     margin-left: 1rem;
     font-weight: bold;
     background-color: transparent;
     outline: none;
     border: none;
+}
+
+.cartAction{
+    position: relative;
+    margin-left: 1rem;
+    padding: 10px;
+}
+
+.cartIndex{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgb(10, 41, 28);
+    color: white;
+    font-size: small;
+    font-weight: 700;
+    border-radius: 100%;
+    padding: 6px;
 }
