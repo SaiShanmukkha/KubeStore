@@ -100,6 +100,7 @@ export default function Index() {
                       product.productVariations[i].images.map((e, idx)=>{
                         return (
                           <button
+                            key={e.url}
                             onClick={()=>setImg(idx)}
                             type="button"
                             className="cursor-pointer flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-900 text-center"
@@ -191,17 +192,17 @@ export default function Index() {
                 {
                     product.productVariations.map((e, idx)=>{
                         return (
-                            <label className="cursor-pointer" onClick={()=>setI(idx)}>
-                            <input
-                                type="radio"
-                                name="type"
-                                value="Powder"
-                                className="peer sr-only"
-                                checked={idx==i}
-                            />
-                            <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                                {e.color}
-                            </p>
+                            <label key={e.color} className="cursor-pointer" onClick={()=>setI(idx)}>
+                              <input
+                                  type="radio"
+                                  name="type"
+                                  value="Powder"
+                                  className="peer sr-only"
+                                  checked={idx==i}
+                              />
+                              <p className="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
+                                  {e.color}
+                              </p>
                             </label>
                         );
                     })
@@ -213,7 +214,7 @@ export default function Index() {
                 {
                     product.productVariations[i].size.map((e)=>{
                         return (
-                            <label className="cursor-pointer" onClick={()=>setSize(e)}>
+                            <label key={e} className="cursor-pointer" onClick={()=>setSize(e)}>
                                 <input
                                     type="radio"
                                     name="subscription"

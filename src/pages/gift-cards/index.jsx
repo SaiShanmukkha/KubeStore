@@ -60,7 +60,7 @@ export default function GiftCardsPage() {
       {/* Gift Card Sharing Section */}
       <div className="my-6">
         <h2 className="text-xl font-semibold mb-3">Share Your Gift Card</h2>
-        <p className="mb-3">Enter the recipient's email address to share your gift card with them.</p>
+        <p className="mb-3">Enter the recipient&apos;s email address to share your gift card with them.</p>
         <input 
           type="email" 
           placeholder="Recipient's Email" 

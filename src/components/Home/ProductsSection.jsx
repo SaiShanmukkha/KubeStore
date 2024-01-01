@@ -22,7 +22,7 @@ export default function ProductsSection(){
         <section className={styles.productSection}>
             {
                 productsInfo.products.map((product)=>{
-                    return <ProductCard data={product} className="flex-1" />;
+                    return <ProductCard key={product.name} data={product} className="flex-1" />;
                 })
             }         
         </section>
