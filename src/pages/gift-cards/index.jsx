@@ -63,7 +63,7 @@ export default function GiftCardsPage() {
         <p className="mb-3">Enter the recipient&apos;s email address to share your gift card with them.</p>
         <input 
           type="email" 
-          placeholder="Recipient's Email" 
+          placeholder="Recipient Email" 
           className="shadow appearance-none border rounded py-2 px-3 text-grey-darker"
         />
         <button 
